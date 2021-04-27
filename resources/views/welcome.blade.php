@@ -27,16 +27,14 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="row">
                 @foreach ($getVideos as $item)
-                    <div class="col-md-4">
-                        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                            <h3 class="mt-3">{{$item->title}}</h3>
-                            <video width="320" height="240" controls>
-                                <source src="{{asset('storage/users_videos/'.$item->video)}}" type="video/mp4"><br>
-                                <source src="movie.ogg" type="video/ogg">
-                                Your browser does not support the video tag.
-                            </video>
-                            <h5>{{$item->description}}</h5>
-                        </div>
+                    <div class="">
+                        <h3 class="ml-5">{{$item->title}}</h3>
+                        <video width="380" height="240" controls class="ml-5">
+                            <source src="{{asset('storage/users_videos/'.$item->video)}}" type="video/mp4"><br>
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h5 class="ml-5 mt-1">{{$item->description}}</h5>
                     </div>
                 @endforeach
             </div>

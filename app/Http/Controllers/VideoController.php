@@ -39,7 +39,7 @@ class VideoController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'video' => 'required',
+            'video' => 'required|file|max:20000',
         ]);
         $addVideo = new Video();
         $addVideo->title = $request->title;
